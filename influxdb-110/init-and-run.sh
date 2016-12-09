@@ -50,7 +50,7 @@ done
 echo "Influx available (PID=$INFLUX_PID)."
 
 echo "Initializing user"
-if [ -z "`curl -sli $INFLUX_URL/query --data-urlencode \"q=CREATE USER $INFLUXDB_USERNAME WITH PASSWORD '$INFLUXDB_PASSWORD' WITH ALL PRIVILEGES\" | grep \"$GREP_HTTP_OK\"`" ]; then
+if [ -z "`curl -sli $INFLUX_URL/query?u=$INFLUXDB_USERNAME\&p=$INFLUXDB_PASSWORD --data-urlencode \"q=CREATE USER $INFLUXDB_USERNAME WITH PASSWORD '$INFLUXDB_PASSWORD' WITH ALL PRIVILEGES\" | grep \"$GREP_HTTP_OK\"`" ]; then
   stopWithFail $INFLUX_PID "Cannot create user. Exiting..."
 else
   echo "Created user with all privileges."
