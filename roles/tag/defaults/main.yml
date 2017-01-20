@@ -1,0 +1,8 @@
+---
+
+push_images: "no"
+
+registry_host: "tapimages"
+registry_port: 8080
+
+kerberos_file_name: "kerberos-jwt-1.1.tar.gz"
