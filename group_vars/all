@@ -30,3 +30,4 @@
 # 'path' parameter is a relative path to image's Dockerfile.
 tap_offering_images:
   - { name: "tap-influxdb", tag: "1.1.0", path: "images/influxdb-110" }
+  - { name: "curljob", tag: "alpine.3.4.6", path: "images/curljob" }
