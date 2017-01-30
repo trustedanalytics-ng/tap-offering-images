@@ -31,3 +31,4 @@
 tap_offering_images:
   - { name: "tap-influxdb", tag: "1.1.0", path: "images/influxdb-110" }
   - { name: "curljob", tag: "alpine.3.4.6", path: "images/curljob" }
+  - { name: "tap-postgresql", tag: "9.3", path: "images/postgresql-93" }
