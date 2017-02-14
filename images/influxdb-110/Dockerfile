@@ -17,6 +17,7 @@ FROM influxdb:1.1.0
 MAINTAINER Karol Zalewski "karol.zalewski@intel.com"
 
 ADD init-and-run.sh /
+RUN chmod +x /init-and-run.sh && sync
 
 EXPOSE 8083
 EXPOSE 8086
