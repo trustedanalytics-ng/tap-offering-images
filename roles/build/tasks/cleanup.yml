@@ -16,6 +16,8 @@
 
 ---
 
-- include: prepare_workdir.yml
-- include: build_images.yml
-- include: cleanup.yml
+- name: Delete work directory
+  file:
+    path: "{{ workdir }}"
+    state: absent
+  when: dont_cleanup is not defined
